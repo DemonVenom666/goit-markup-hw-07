@@ -51,7 +51,7 @@ img {
     padding-right: 15px;
 }
 
-.addition {
+.page-header__addition {
     display: flex;
     align-items: center;
 }
@@ -446,11 +446,14 @@ img {
 }
 
 .social {
+    display: flex;
     margin: 0;
     padding: 0;
+}
+
+.social--centering {
     justify-content: center;
     align-items: center;
-    display: flex;
 }
 
 .social__list {
@@ -471,6 +474,10 @@ img {
     transition: background var(--primary-transition);
 }
 
+.social__link--background-transparancy {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .social__link:hover,
 .social__link:focus {
     background-color: var(--accent-color);
@@ -480,6 +487,10 @@ img {
 .social__icon {
     fill: #AFB1B8;
     transition: fill var(--primary-transition);
+}
+
+.social__icon--color-footer {
+    fill: var(--white-color);
 }
 
 .social__link:hover>.social__icon,
@@ -614,41 +625,6 @@ img {
     margin-bottom: 20px;
 }
 
-.footer-social {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-social__list {
-    margin-left: 10px;
-}
-
-.footer-social__list:first-child {
-    margin-left: 0;
-}
-
-.footer-social__link {
-    display: inline-flex;
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-    justify-content: center;
-    align-items: center;
-    transition: background var(--primary-transition);
-}
-
-.footer-social__icon {
-    fill: var(--white-color);
-}
-
-.footer-social__link:hover,
-.footer-social__link:focus {
-    background-color: var(--accent-color);
-    transition: background var(--primary-transition);
-}
-
 .form-subscription {
     margin-left: auto;
 }
@@ -745,13 +721,13 @@ img {
     transition: opacity var(--primary-transition);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
     visibility: visible;
     opacity: 0;
     pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop .modal {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -865,6 +841,11 @@ textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
+    transition: border var(--primary-transition);
+}
+
+.modal-form__textarea:focus {
+    border-color: var(--accent-color);
     transition: border var(--primary-transition);
 }
 
