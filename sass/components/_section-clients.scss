@@ -1,0 +1,54 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients__subtitle {
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.company {
+  @extend %list;
+  display: flex;
+}
+
+.company__list {
+  margin-left: 30px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.company__link {
+  display: inline-flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  transition: border $primaryTransition;
+
+  &:hover,
+  &:focus {
+    border-color: $accentColor;
+    transition: border $primaryTransition;
+  }
+}
+
+.company__icons {
+  fill: #afb1b8;
+  transition: fill $primaryTransition;
+
+  .company__link:hover &,
+  .company__link:focus & {
+    fill: $accentColor;
+    transition: fill $primaryTransition;
+  }
+}

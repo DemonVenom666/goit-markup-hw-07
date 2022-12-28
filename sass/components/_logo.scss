@@ -1,0 +1,17 @@
+.logo {
+  @extend %list;
+  color: $logoColor;
+
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  &--inverse {
+    color: $whiteColor;
+  }
+
+  &__lable {
+    color: $accentColor;
+  }
+}

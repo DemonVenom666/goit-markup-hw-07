@@ -1,0 +1,130 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__box {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address {
+  font-style: normal;
+
+  &__list {
+    @extend %list;
+  }
+}
+
+.address__link {
+  text-decoration: none;
+  display: block;
+  color: $whiteColor;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-bottom: 9px;
+  transition: color $primaryTransition;
+
+  &--not-indent {
+    margin-bottom: 0;
+  }
+  &--text {
+    color: $addressColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+    transition: color $primaryTransition;
+  }
+}
+
+.footer-link {
+  margin-left: 70px;
+}
+
+.footer-link__subtitle {
+  color: $whiteColor;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form-subscription {
+  margin-left: auto;
+}
+
+.form-subscription__subtitle {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $whiteColor;
+}
+
+.form-subscription__box {
+  text-align: center;
+}
+
+.form-subscription__input {
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  width: 358px;
+  height: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.form-subscription__button {
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  background-color: $accentColor;
+  color: $whiteColor;
+  border: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background $primaryTransition;
+
+  &:hover,
+  &:focus {
+    background-color: $buttonActive;
+    transition: background $primaryTransition;
+  }
+}
+
+.form-subscription__icon {
+  margin-left: 10px;
+  vertical-align: middle;
+}
